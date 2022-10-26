@@ -5,6 +5,8 @@ body {
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    overflow-x: hidden;
 }
 
 section {
@@ -21,21 +23,27 @@ h1 {
     min-height: 100vh;
 }
 
-.hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100);
-    transition: all 1s;
+.box {
+    background-color: rgb(80, 79, 79);
+    border: 2px solid rgba(88, 86, 86, 0.955);
+    color: rgb(217, 212, 212);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 275px;
+    margin: 260px;
+    border-radius: 10px;
+    box-shadow: rgba(88, 86, 86, 0.955) 0px 10px 30px -7px;
+    transform: translateX(400%);
+    transform: transform 0.4s ease;
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+.box:nth-of-type(even){
+    transform:  translateX(-400%);
+
 }
 
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
+.box.show {
+    transform: translate(0);
 }
+
