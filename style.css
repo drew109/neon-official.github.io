@@ -99,3 +99,12 @@ h4.box {
         transition: none;
     }
 }
+
+.glow::before,
+glow::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, yellow), rgb(247, 121, 4), rgb(72, 241, 72), rgb(71, 196, 238), magenta, rgb(175, 7, 7), rgb(6, 177, 6), orangered, rgb(21, 114, 236);
+}
